@@ -15,4 +15,4 @@ Simply extract the .tar.gz's in their respective folders, you can delete them at
 
 # Warnings
 
-These builds are technically worse than alpha, and they are customized, do not report any issues to Wine, or TKG. Some issues my be unresolvable, and there will be a few oddities here and there.
+These builds are technically worse than alpha, and they are customized, do not report any issues to Wine, or TKG. Some issues may be unresolvable, and there will be a few oddities here and there.
