@@ -22,14 +22,14 @@ These builds are technically worse than alpha, and they are customized, do not r
 # The Edit I don't know how to provide
 Because TKG's script is quite extensive, I needed to slot in a way to apply the registry edit during initial prefix generation, so that the registry is updated within the build. The edit looks like this
 ```
+# Apply Wayland registry settings
+echo "Applying Wayland registry settings..."
+WINEPREFIX="$_nowhere/proton_tkg_$_protontkg_version/files/share/default_pfx" "$_nowhere/proton_tkg_$_protontkg_version/files/bin/wine" regedit /s "$_nowhere/proton-tkg-userpatches/wayland.reg" >>"$_logdir"/proton-tkg.log 2>&1
+
 # default prefix
 echo ''
 echo "Generating default prefix..."
 python3 "$_nowhere"/proton_template/default_pfx.py "$_nowhere/proton_tkg_$_protontkg_version/files/share/default_pfx" "$_nowhere/proton_tkg_$_protontkg_version/files" >>"$_logdir"/proton-tkg.log 2>&1
-
-# Apply Wayland registry settings
-echo "Applying Wayland registry settings..."
-WINEPREFIX="$_nowhere/proton_tkg_$_protontkg_version/files/share/default_pfx" "$_nowhere/proton_tkg_$_protontkg_version/files/bin/wine" regedit /s "$_nowhere/proton-tkg-userpatches/wayland.reg" >>"$_logdir"/proton-tkg.log 2>&1
 
 wine_is_running
 ```
